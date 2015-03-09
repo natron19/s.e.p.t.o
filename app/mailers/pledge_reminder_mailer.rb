@@ -1,0 +1,2 @@
+class PledgeReminderMailer < ApplicationMailer
+end
