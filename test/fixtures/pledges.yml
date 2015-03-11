@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  frequency: 1
+  startdate: 2015-03-10 20:12:27
+  user_id: 1
+
+two:
+  amount: 1
+  frequency: 1
+  startdate: 2015-03-10 20:12:27
+  user_id: 1
