@@ -1,3 +1,15 @@
 
 <h1> All Pledges </h1> 
 
+<ul> 
+<% @users.each do |user| %> 
+  <p>
+  <li>Name: <%= user.name%> </li><br>
+  <li>Adderess: <%= user.address %> </li><br>
+  <li>Email: <%= user.email %> </li><br>
+  <li>Pledge: <%= user.pledge.try(:amount) %></li><br>
+  <li>Frequency: <%= user.pledge.try(:frequency) %> </li><br>
+  <li>Start Date: <%= user.pledge.try(:startdate) %> </li>
+  </p>
+<% end %> 
+</ul> 

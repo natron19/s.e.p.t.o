@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/index' => "admin#index"
+
   resources :users, except: [:destroy, :edit, :update]
 
   root 'users#index' 

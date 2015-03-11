@@ -1,3 +1,30 @@
 <h1>New Pledge</h1>
 
+<%= form_for @user do |f| %> 
 
+<%= f.label :name %> <br>
+<%= f.text_field :name %> <br>
+
+<%= f.label :adderss %> <br>
+<%= f.text_field :address %><br> 
+
+<%= f.label :email %> <br>
+<%= f.text_field :email %><br> 
+<hr> 
+<%= f.fields_for(:pledge_attributes) do |p| %> 
+  <%= p.label :amount %> <br>
+  <%= p.number_field :amount %> <br>
+
+  <%= p.label :frequency %> <br>
+  <%= p.select :frequency, options_for_select(["Daily", "Weekly", "Monthly"]) %><br>
+
+  <%= p.label :startdate %> <br>
+  <%= p.date_field :startdate %><br>
+<% end %>
+<br>
+<hr> 
+<%= f.submit "Submit Pledge" %> 
+
+<hr>
+<hr>
+<% end %> 
