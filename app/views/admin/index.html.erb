@@ -4,12 +4,13 @@
 <ul> 
 <% @users.each do |user| %> 
   <p>
-  <li>Name: <%= user.name%> </li><br>
-  <li>Adderess: <%= user.address %> </li><br>
-  <li>Email: <%= user.email %> </li><br>
-  <li>Pledge: <%= user.pledge.try(:amount) %></li><br>
-  <li>Frequency: <%= user.pledge.try(:frequency) %> </li><br>
-  <li>Start Date: <%= user.pledge.try(:startdate) %> </li>
-  </p>
+  <li>
+    Name: <%= user.name%> <br>
+    Adderess: <%= user.address %><br>
+    Email: <%= user.email %> <br>
+    Pledge: <%= user.pledge.try(:amount) %> <br>
+    Frequency: <%= user.pledge.try(:frequency) %> <br>
+    Start Date: <%= user.pledge.try(:startdate) %> <br>
+  </li>
 <% end %> 
 </ul> 
