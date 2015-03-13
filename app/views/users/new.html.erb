@@ -2,6 +2,12 @@
 
 <%= form_for @user do |f| %> 
 
+<% if @user.errors.any? %> 
+  <% @user.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger"><%= msg %> </div>
+  <% end %> 
+<% end %> <br> 
+
 <%= f.label :name %> <br>
 <%= f.text_field :name %> <br>
 
