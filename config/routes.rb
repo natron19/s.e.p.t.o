@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users, except: [:destroy, :edit, :update]
 
+  get '/address' => "users#address", as: :new_address
+
   root 'users#index' 
 
   # The priority is based upon order of creation: first created -> highest priority.

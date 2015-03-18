@@ -1,0 +1,23 @@
+<h1> Add your address to our mailing list </h1>
+
+
+<%= form_for @user do |f| %> 
+
+<% if @user.errors.any? %> 
+  <% @user.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger"><%= msg %> </div>
+  <% end %> 
+<% end %> <br> 
+
+<%= f.label :name %> <br>
+<%= f.text_field :name %> <br>
+
+<%= f.label :adderss %> <br>
+<%= f.text_field :address %><br> 
+
+<%= f.label :email %> <br>
+<%= f.text_field :email %><br> 
+
+<%= f.submit "Add your contact info" %> 
+
+<% end %> 

@@ -19,6 +19,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def address 
+    @user = User.new
+  end 
+
   private 
 
   def user_params 
