@@ -1,6 +1,10 @@
 
 <h1> All Pledges </h1> 
 
+<p>
+  <%= link_to "Log Out", destroy_user_session_path %> 
+</p> 
+
 <ul> 
 <% @users.each do |user| %> 
   <p>
